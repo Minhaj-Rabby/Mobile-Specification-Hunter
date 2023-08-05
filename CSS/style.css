@@ -1,0 +1,51 @@
+/* overflow hidden */
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+header>img{
+    width: 30%;
+}
+
+/* error hidden */
+#error-message{
+    display: none;
+}
+.input-width{
+        width: 50%;
+    }
+/* spinner hidden */
+#spinner{
+    display: none;
+}
+/* see-more button hidden */
+#see-more{
+    display: none;
+}
+@media (max-width:768px) {
+   
+    .container-sm{
+        padding: 0;
+    }
+    .input-width{
+        width: 80%;
+    }
+    header>img{
+    width: 70%;
+    }
+}
+@media (max-width:819px) {
+   
+    .container-sm{
+        padding: 0;
+    }
+    .input-width{
+        width: 80%;
+    }
+    header>img{
+    width: 90%;
+    }
+}

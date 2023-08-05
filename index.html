@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Specification Hunter</title>
+
+    <!-- Bootstrap CSS Linked-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- Vanilla CSS Linked-->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class=" bg-gray my-5">
+    <header class="text-center">
+        <!-- header start -->
+        <h1 class="text-center">Mobile Specification Hunter</h1>
+        <img src="images/icon_ui.png" alt="">
+    </header>
+    <main>
+        <!-- search area -->
+        <div class="input-group my-3 mx-auto input-width">
+            <input type="text" id="search-field" class="form-control" placeholder="Search With Mobile Name"
+                aria-label="Search the food you want" aria-describedby="button-addon2">
+            <button class="btn btn-secondary ms-2" onclick="searchFood()" type="button" id="button-addon2">Search</button>
+        </div>
+        <!-- spinner for loading -->
+        <div class="d-flex justify-content-center mt-5">
+            <div class="spinner-border" id="spinner" role="status" >
+            </div>
+        </div>
+        <!-- Error message -->
+        <h2 id="error-message" class="text-center">No Phone find</h2>
+
+    <!-- Modal for Specification -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div id="single-phone" class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        </div>
+    </div>
+
+        <!-- search result -->
+        <div id="search-result" class="card-group row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 container-sm mx-auto my-3">
+        </div>
+
+        <!-- see more section -->
+        <div class="container">
+             <div class="d-flex justify-content-end">
+            <button class="btn btn-secondary" id="see-more" type="button">Show all <i class="fas fa-long-arrow-alt-right ms-2"></i></button>
+        </div>
+        </div>
+       
+
+    </main>
+    
+    <!-- fontawsome kit -->
+<script src="https://kit.fontawesome.com/d392659d16.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Script -->
+    <script src="JS/app.js"></script>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Script end -->
+</body>
+
+</html>
