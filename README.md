@@ -2,7 +2,7 @@
      
 - live_site: https://mobile-specification-hunter.netlify.app/
 - client_side: https://github.com/Minhaj-Rabby/Mobile-Specification-Hunter/
-- Tchnology Used: HTML || CSS || Bootstrap || Java Script || Chrome Dev Tools || Vs code || RESTful APIs || Font Awesome
+- Technology Used: HTML || CSS || Bootstrap || Java Script || Chrome Dev Tools || Vs code || RESTful APIs || Font Awesome
 - Key Features_heading: Mobile Specification Hunter website is a collection of various phone's specification
 - Key Features:
    - In the Lower part of Home Interface we can see all of phones  through Java Script Dom manipulation and RESTful Api.
