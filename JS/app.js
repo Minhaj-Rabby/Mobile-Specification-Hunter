@@ -38,6 +38,9 @@ const searchFood = () => {
         }
     )
 }
+
+
+
 // Search result display
 const displaySearchResult = phones => {
      const searchResult = document.getElementById('search-result');
@@ -62,7 +65,46 @@ const displaySearchResult = phones => {
      });
     spinner('none');
     document.getElementById('see-more').style.display = 'none';
+    document.getElementById('all-phone').style.display = 'none';
+    document.getElementById('label-all-phone').style.display = 'none';
+
 }
+
+
+const allphone=()=>{
+    const url = `https://openapi.programming-hero.com/api/phones?search=p`;
+    fetch(url)
+        .then(Response => Response.json())
+        .then(data => displayAlllPhoneResult(data.data))
+}
+
+window.onload = function () {
+    allphone();
+};
+const displayAlllPhoneResult = phones => {
+     const searchResult = document.getElementById('all-phone');
+    searchResult.textContent = '';
+     phones.forEach(phone => {
+         const div = document.createElement('div');
+         //adding to card
+        div.innerHTML = `
+          <div class="card shadow-lg h-100 p-4  rounded">
+            <img src="${phone.image}" class="card-img-top img-fluid w-75 mx-auto" alt="Mobail Info">
+            <div class="card-body">
+                    <h5 class="card-title">Phone Name : ${phone.phone_name}</h5>
+                    <h5 class="card-title">Phone Brand : ${phone.brand}</h5>
+            </div>
+                <div class="card-footer bg-white border-0">            
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="loadData('${phone.slug}')">Details Explore</button>
+                </div>
+         </div>
+        `;
+        div.classList.add('col');
+         searchResult.appendChild(div);
+     });
+    spinner('none');
+}
+
 //load data using id
 const loadData = id => {
     const url = `https://openapi.programming-hero.com/api/phone/${id}`;
